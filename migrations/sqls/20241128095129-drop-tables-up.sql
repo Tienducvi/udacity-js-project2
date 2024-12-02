@@ -24,6 +24,7 @@ create table orders (
 
 create table order_products (
     order_id integer not null references orders (id),
+    user_id integer not null references users (id),
     product_id integer not null references products (id),
     quantity integer not null
 );

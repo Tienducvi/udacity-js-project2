@@ -75,6 +75,7 @@ Table: orders (
 
 Table: order_products (
     order_id integer [not null] (order table foreign key),
+    user_id integer [not null] (order table foreign key),
     product_id integer [not null] (product table foreign key),
     quantity integer [not null]
 );
