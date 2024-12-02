@@ -7,15 +7,24 @@ These are the notes from a meeting with the frontend developer that describe wha
 #### Products
 - Index: 'products/' [GET]
 - Show: 'products/:id' [GET]
-- Create [token required]: '/users' [POST]
+- Create [token required]: '/products' [POST]
+- Update [token required]: '/products' [PUT]
+- Delete [token required]: '/products/:id' [DELETE]
 
 #### Users
 - Index [token required]: '/users' [GET]
 - Show [token required]: '/users/:id' [GET]
 - Create N[token required]: '/users' [POST]
+- Update [token required]: '/users' [PUT]
+- Delete [token required]: '/users/:id' [DELETE]
+- Authenticate [token required]: '/users/authenticate' [POST]
 
 #### Orders
 - Current Order by user (args: user id)[token required]: '/orders/:id' [GET]
+- Index [token required]: '/orders' [GET]
+- Create N[token required]: '/orders' [POST]
+- Update [token required]: '/orders' [PUT]
+- Delete [token required]: '/orders/:id' [DELETE]
 
 ## Data Shapes
 #### Product
@@ -59,3 +68,13 @@ Table: orders (
     status varchar(200) [not null]  
 );
 
+#### Order Products
+- id of order
+- id of each product in the order
+- quantity of each product in the order
+
+Table: order_products (
+    order_id integer [not null] (order table foreign key),
+    product_id integer [not null] (product table foreign key),
+    quantity integer [not null]
+);

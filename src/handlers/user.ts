@@ -11,14 +11,24 @@ dotenv.config();
 const userInstance = new UserModel()
 
 const index = async (_req: Request, res: Response) => {
-  const users = await userInstance.showAll()
-  res.json(users)
+    try {
+        const users = await userInstance.showAll()
+        res.json(users)
+    } catch (error) {
+        console.error('Error fetching orders:', error);
+        res.status(500).json({ error: 'Failed to fetch users' });
+    }
 }
 
 const show = async (req: Request, res: Response) => {
-    let userId : number = parseInt(req.params.id)
-   const user = await userInstance.show(userId)
-   res.json(user)
+    try {
+        let userId : number = parseInt(req.params.id)
+        const user = await userInstance.show(userId)
+         res.json(user)
+    } catch (error) {
+        console.error('Error fetching orders:', error);
+        res.status(500).json({ error: 'Failed to fetch user' });
+    }
 }
 
 const create = async (req: Request, res: Response) => {
@@ -56,8 +66,13 @@ const update = async (req: Request, res: Response) => {
 }
 
 const destroy = async (req: Request, res: Response) => {
-    const deleted = await userInstance.delete(req.body.id)
-    res.json(deleted)
+    try {
+        const deleted = await userInstance.delete(req.body.id)
+        res.json(deleted)
+    } catch (error) {
+        console.error('Error fetching orders:', error);
+        res.status(500).json({ error: 'Failed to delete user' });
+    }
 }
 
 const authenticate = async (req: Request, res: Response) => {

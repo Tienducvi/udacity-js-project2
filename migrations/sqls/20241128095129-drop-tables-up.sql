@@ -21,3 +21,9 @@ create table orders (
     user_id integer not null references users (id),
     status varchar(200) not null  
 );
+
+create table order_products (
+    order_id integer not null references orders (id),
+    product_id integer not null references products (id),
+    quantity integer not null
+);

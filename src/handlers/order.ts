@@ -5,19 +5,28 @@ import { verifyToken } from './token';
 const orderInstance = new OrderModel()
 
 const index = async (_req: Request, res: Response) => {
-  const orders = await orderInstance.showAll()
-  res.json(orders)
+    try {
+        const orders = await orderInstance.showAll()
+        res.json(orders)
+    } catch (error) {
+        console.error('Error fetching orders:', error);
+        res.status(500).json({ error: 'Failed to fetch orders' });
+    }
 }
 
 const show = async (req: Request, res: Response) => {
-    let orderId : number = parseInt(req.params.id)
-   const order = await orderInstance.show(orderId)
-   res.json(order)
+    try {
+        let orderId : number = parseInt(req.params.id)
+        const order = await orderInstance.show(orderId)
+        res.json(order)
+    } catch (error) {
+        console.error('Error fetching orders:', error);
+        res.status(500).json({ error: 'Failed to fetch order' });
+    }
 }
 
 const create = async (req: Request, res: Response) => {
     try {
-        console.log(req.body)
         const order: BaseOrder = {
             productId: req.body.productId,
             quantity: req.body.quantity,
@@ -50,8 +59,13 @@ const update = async (req: Request, res: Response) => {
 }
 
 const destroy = async (req: Request, res: Response) => {
-    const deleted = await orderInstance.delete(req.body.id)
-    res.json(deleted)
+    try {
+        const deleted = await orderInstance.delete(req.body.id)
+        res.json(deleted)
+    } catch (error) {
+        console.error('Error fetching orders:', error);
+        res.status(500).json({ error: 'Failed to delete order' });
+    }
 }
 
 const orderRoutes = (app: express.Application) => {

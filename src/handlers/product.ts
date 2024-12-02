@@ -5,14 +5,24 @@ import { verifyToken } from './token';
 const productInstance = new OrderProduct()
 
 const index = async (_req: Request, res: Response) => {
-  const products = await productInstance.showAll()
-  res.json(products)
+    try {
+        const products = await productInstance.showAll()
+        res.json(products)
+    } catch (error) {
+        console.error('Error fetching orders:', error);
+        res.status(500).json({ error: 'Failed to fetch products' });
+    }
 }
 
 const show = async (req: Request, res: Response) => {
-    let productId : number = parseInt(req.params.id)
-   const product = await productInstance.show(productId)
-   res.json(product)
+    try {
+        let productId : number = parseInt(req.params.id)
+        const product = await productInstance.show(productId)
+        res.json(product)
+    } catch (error) {
+        console.error('Error fetching orders:', error);
+        res.status(500).json({ error: 'Failed to fetch product' });
+    }
 }
 
 const create = async (req: Request, res: Response) => {
@@ -45,8 +55,13 @@ const update = async (req: Request, res: Response) => {
 }
 
 const destroy = async (req: Request, res: Response) => {
-    const deleted = await productInstance.delete(req.body.id)
-    res.json(deleted)
+    try {
+        const deleted = await productInstance.delete(req.body.id)
+        res.json(deleted)
+    } catch (error) {
+        console.error('Error fetching orders:', error);
+        res.status(500).json({ error: 'Failed to delete product' });
+    }
 }
 
 const productRoutes = (app: express.Application) => {
