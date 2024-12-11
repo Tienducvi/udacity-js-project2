@@ -22,9 +22,9 @@ describe('Product Handler', () => {
 
   beforeAll(async (done) => {
     const userData: BaseUser = {
-      username: 'ViTieu',
-      firstname: 'Vi',
-      lastname: 'Tieu',
+      username: 'TuNguyen',
+      firstname: 'Tu',
+      lastname: 'Nguyen',
       password: 'password12345',
     };
 

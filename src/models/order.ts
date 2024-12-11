@@ -33,7 +33,7 @@ export class OrderModel {
             order = result.rows[0];
             return order;
         } catch (error) {
-            console.error("Error while inserting orders:", error);
+            console.error("Encounter orders issue:", error);
             throw error;
         } finally {
             if (Client) {
@@ -63,7 +63,7 @@ export class OrderModel {
                 status: result.rows[0].status
             });
         } catch (error) {
-            console.error("Error while inserting orders:", error);
+            console.error("Encounter orders issue:", error);
             throw error;
         } finally {
             if (Client) {
@@ -86,7 +86,7 @@ export class OrderModel {
 
             return orderList;
         } catch (error) {
-            console.error("Error while inserting orders:", error);
+            console.error("Encounter orders issue:", error);
             throw error;
         } finally {
             if (Client) {

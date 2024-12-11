@@ -15,7 +15,7 @@ const index = async (_req: Request, res: Response) => {
         const users = await userInstance.showAll()
         res.json(users)
     } catch (error) {
-        console.error('Error fetching orders:', error);
+        console.error('Encoutner fetching issue:', error);
         res.status(500).json({ error: 'Failed to fetch users' });
     }
 }
@@ -26,7 +26,7 @@ const show = async (req: Request, res: Response) => {
         const user = await userInstance.show(userId)
          res.json(user)
     } catch (error) {
-        console.error('Error fetching orders:', error);
+        console.error('Encoutner fetching issue:', error);
         res.status(500).json({ error: 'Failed to fetch user' });
     }
 }
@@ -70,7 +70,7 @@ const destroy = async (req: Request, res: Response) => {
         const deleted = await userInstance.delete(req.body.id)
         res.json(deleted)
     } catch (error) {
-        console.error('Error fetching orders:', error);
+        console.error('Encoutner fetching issue:', error);
         res.status(500).json({ error: 'Failed to delete user' });
     }
 }

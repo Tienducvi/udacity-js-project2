@@ -38,18 +38,18 @@ describe('User Model', () => {
     
       it('create method should add a user', async () => {
         const result = await user.create({
-            username: 'Vitd98',
-            firstname: 'Vi',
-            lastname: 'Tieu',
+            username: 'TuNguyen',
+            firstname: 'Tu',
+            lastname: 'Nguyen',
             password: 'password12345',
         });
         userId = result.id
         password = result.password
         expect(result).toEqual({
             id: userId,
-            username: 'Vitd98',
-            firstname: 'Vi',
-            lastname: 'Tieu',
+            username: 'TuNguyen11',
+            firstname: 'Tu',
+            lastname: '11',
             password: password
         });
       });
@@ -63,9 +63,9 @@ describe('User Model', () => {
         const result = await user.show(userId);
         expect(result).toEqual({
             id: userId,
-            username: 'Vitd98',
-            firstname: 'Vi',
-            lastname: 'Tieu',
+            username: 'TuNguyen12',
+            firstname: 'Tu',
+            lastname: '12',
             password: password
         });
       });

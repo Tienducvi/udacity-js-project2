@@ -59,9 +59,9 @@ describe('Product Handler', function () {
             switch (_a.label) {
                 case 0:
                     userData = {
-                        username: 'ViTieu',
-                        firstname: 'Vi',
-                        lastname: 'Tieu',
+                        username: 'TuNguyen',
+                        firstname: 'Tu',
+                        lastname: 'Nguyen',
                         password: 'password12345',
                     };
                     return [4 /*yield*/, request.post('/users').send(userData)];

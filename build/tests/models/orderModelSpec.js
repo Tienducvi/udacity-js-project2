@@ -76,9 +76,9 @@ describe('Order Model', function () {
             switch (_a.label) {
                 case 0:
                     userData = {
-                        username: 'ViTieuOrder9888',
-                        firstname: 'Vi',
-                        lastname: 'Tieu',
+                        username: 'TuNguyen',
+                        firstname: 'Tu',
+                        lastname: 'Nguyen',
                         password: 'password12345',
                     };
                     return [4 /*yield*/, user.create(userData)];

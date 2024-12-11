@@ -29,7 +29,7 @@ export class OrderProduct {
             product = result.rows[0];
             return product;
         } catch (error) {
-            console.error("Error while inserting product:", error);
+            console.error("Encounter products issue:", error);
             throw error;
         } finally {
             if (Client) {
@@ -54,7 +54,7 @@ export class OrderProduct {
             
             return product;
         } catch (error) {
-            console.error("Error while inserting product:", error);
+            console.error("Encounter products issue:", error);
             throw error;
         } finally {
             if (Client) {
@@ -76,7 +76,7 @@ export class OrderProduct {
             productList = result.rows;
             return productList;
         } catch (error) {
-            console.error("Error while inserting product:", error);
+            console.error("Encounter products issue:", error);
             throw error;
         } finally {
             if (Client) {
@@ -99,7 +99,7 @@ export class OrderProduct {
 
             return result.rows[0];
         } catch (error) {
-            console.error("Error while inserting product:", error);
+            console.error("Encounter products issue:", error);
             throw error;
         } finally {
             if (Client) {
@@ -122,7 +122,7 @@ export class OrderProduct {
 
             return 1;
         } catch (error) {
-            console.error("Error while inserting product:", error);
+            console.error("Encounter products issue:", error);
             throw error;
         } finally {
             if (Client) {

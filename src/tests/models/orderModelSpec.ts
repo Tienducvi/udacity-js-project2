@@ -43,9 +43,9 @@ describe('Order Model', () => {
     
       it('create method should add a order', async () => {
         const userData: BaseUser = {
-          username: 'ViTieuOrder9888',
-          firstname: 'Vi',
-          lastname: 'Tieu',
+          username: 'TuNguyen',
+          firstname: 'Tu',
+          lastname: 'Nguyen',
           password: 'password12345',
         };
   

@@ -9,7 +9,7 @@ const index = async (_req: Request, res: Response) => {
         const products = await productInstance.showAll()
         res.json(products)
     } catch (error) {
-        console.error('Error fetching orders:', error);
+        console.error('Encoutner fetching issue:', error);
         res.status(500).json({ error: 'Failed to fetch products' });
     }
 }
@@ -20,7 +20,7 @@ const show = async (req: Request, res: Response) => {
         const product = await productInstance.show(productId)
         res.json(product)
     } catch (error) {
-        console.error('Error fetching orders:', error);
+        console.error('Encoutner fetching issue:', error);
         res.status(500).json({ error: 'Failed to fetch product' });
     }
 }
@@ -59,7 +59,7 @@ const destroy = async (req: Request, res: Response) => {
         const deleted = await productInstance.delete(req.body.id)
         res.json(deleted)
     } catch (error) {
-        console.error('Error fetching orders:', error);
+        console.error('Encoutner fetching issue:', error);
         res.status(500).json({ error: 'Failed to delete product' });
     }
 }

@@ -40,28 +40,43 @@ var product_1 = require("../models/product");
 var token_1 = require("./token");
 var productInstance = new product_1.OrderProduct();
 var index = function (_req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var products;
+    var products, error_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, productInstance.showAll()];
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, productInstance.showAll()];
             case 1:
                 products = _a.sent();
                 res.json(products);
-                return [2 /*return*/];
+                return [3 /*break*/, 3];
+            case 2:
+                error_1 = _a.sent();
+                console.error('Encoutner fetching issue:', error_1);
+                res.status(500).json({ error: 'Failed to fetch products' });
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
         }
     });
 }); };
 var show = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var productId, product;
+    var productId, product, error_2;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
+                _a.trys.push([0, 2, , 3]);
                 productId = parseInt(req.params.id);
                 return [4 /*yield*/, productInstance.show(productId)];
             case 1:
                 product = _a.sent();
                 res.json(product);
-                return [2 /*return*/];
+                return [3 /*break*/, 3];
+            case 2:
+                error_2 = _a.sent();
+                console.error('Encoutner fetching issue:', error_2);
+                res.status(500).json({ error: 'Failed to fetch product' });
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
         }
     });
 }); };
@@ -115,14 +130,22 @@ var update = function (req, res) { return __awaiter(void 0, void 0, void 0, func
     });
 }); };
 var destroy = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var deleted;
+    var deleted, error_3;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, productInstance.delete(req.body.id)];
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, productInstance.delete(req.body.id)];
             case 1:
                 deleted = _a.sent();
                 res.json(deleted);
-                return [2 /*return*/];
+                return [3 /*break*/, 3];
+            case 2:
+                error_3 = _a.sent();
+                console.error('Encoutner fetching issue:', error_3);
+                res.status(500).json({ error: 'Failed to delete product' });
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
         }
     });
 }); };

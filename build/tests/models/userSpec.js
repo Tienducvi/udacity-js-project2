@@ -49,9 +49,9 @@ var request = (0, supertest_1.default)(index_1.default);
 var SECRET = process.env.TOKEN_SECRECT;
 describe('User Handler', function () {
     var userData = {
-        username: 'ViTieu988',
-        firstname: 'Vi',
-        lastname: 'Tieu',
+        username: 'TuNguyen13',
+        firstname: 'Tu',
+        lastname: '13',
         password: 'password12345',
     };
     var token, userId = 1;
@@ -143,9 +143,9 @@ describe('User Handler', function () {
                 case 0:
                     newUserData = {
                         id: userId,
-                        username: "ViTieu988",
-                        firstname: 'Vi',
-                        lastname: 'Tien123',
+                        username: "TuNguyen14",
+                        firstname: 'Tu',
+                        lastname: '14',
                         password: 'password6789'
                     };
                     return [4 /*yield*/, request

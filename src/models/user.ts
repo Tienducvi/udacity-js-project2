@@ -35,7 +35,7 @@ export class UserModel {
             user = result.rows[0];
             return user;
         } catch (error) {
-            console.error("Error while inserting user:", error);
+            console.error("Encounter users issue:", error);
             throw error;
         } finally {
             if (Client) {
@@ -60,7 +60,7 @@ export class UserModel {
             
             return user;
         } catch (error) {
-            console.error("Error while inserting user:", error);
+            console.error("Encounter users issue:", error);
             throw error;
         } finally {
             if (Client) {
@@ -82,7 +82,7 @@ export class UserModel {
             userList = result.rows;
             return userList;
         } catch (error) {
-            console.error("Error while inserting user:", error);
+            console.error("Encounter users issue:", error);
             throw error;
         } finally {
             if (Client) {
@@ -107,7 +107,7 @@ export class UserModel {
 
             return result.rows[0];
         } catch (error) {
-            console.error("Error while inserting user:", error);
+            console.error("Encounter users issue:", error);
             throw error;
         } finally {
             if (Client) {
@@ -130,7 +130,7 @@ export class UserModel {
 
             return 1;
         } catch (error) {
-            console.error("Error while inserting user:", error);
+            console.error("Encounter users issue:", error);
             throw error;
         } finally {
             if (Client) {

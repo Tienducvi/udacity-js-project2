@@ -47,28 +47,43 @@ require('dotenv').config({ path: '.env' });
 dotenv_1.default.config();
 var userInstance = new user_1.UserModel();
 var index = function (_req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var users;
+    var users, error_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, userInstance.showAll()];
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, userInstance.showAll()];
             case 1:
                 users = _a.sent();
                 res.json(users);
-                return [2 /*return*/];
+                return [3 /*break*/, 3];
+            case 2:
+                error_1 = _a.sent();
+                console.error('Encoutner fetching issue:', error_1);
+                res.status(500).json({ error: 'Failed to fetch users' });
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
         }
     });
 }); };
 var show = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var userId, user;
+    var userId, user, error_2;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
+                _a.trys.push([0, 2, , 3]);
                 userId = parseInt(req.params.id);
                 return [4 /*yield*/, userInstance.show(userId)];
             case 1:
                 user = _a.sent();
                 res.json(user);
-                return [2 /*return*/];
+                return [3 /*break*/, 3];
+            case 2:
+                error_2 = _a.sent();
+                console.error('Encoutner fetching issue:', error_2);
+                res.status(500).json({ error: 'Failed to fetch user' });
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
         }
     });
 }); };
@@ -127,19 +142,27 @@ var update = function (req, res) { return __awaiter(void 0, void 0, void 0, func
     });
 }); };
 var destroy = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var deleted;
+    var deleted, error_3;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, userInstance.delete(req.body.id)];
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, userInstance.delete(req.body.id)];
             case 1:
                 deleted = _a.sent();
                 res.json(deleted);
-                return [2 /*return*/];
+                return [3 /*break*/, 3];
+            case 2:
+                error_3 = _a.sent();
+                console.error('Encoutner fetching issue:', error_3);
+                res.status(500).json({ error: 'Failed to delete user' });
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
         }
     });
 }); };
 var authenticate = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var user, u, token, error_1;
+    var user, u, token, error_4;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
@@ -160,9 +183,9 @@ var authenticate = function (req, res) { return __awaiter(void 0, void 0, void 0
                 res.json(token);
                 return [3 /*break*/, 4];
             case 3:
-                error_1 = _a.sent();
+                error_4 = _a.sent();
                 res.status(401);
-                res.json({ error: error_1 });
+                res.json({ error: error_4 });
                 return [3 /*break*/, 4];
             case 4: return [2 /*return*/];
         }

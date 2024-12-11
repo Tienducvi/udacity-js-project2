@@ -68,7 +68,7 @@ var OrderModel = /** @class */ (function () {
                         return [2 /*return*/, order];
                     case 4:
                         error_1 = _a.sent();
-                        console.error("Error while inserting orders:", error_1);
+                        console.error("Encounter orders issue:", error_1);
                         throw error_1;
                     case 5:
                         if (Client) {
@@ -109,7 +109,7 @@ var OrderModel = /** @class */ (function () {
                             })];
                     case 4:
                         error_2 = _a.sent();
-                        console.error("Error while inserting orders:", error_2);
+                        console.error("Encounter orders issue:", error_2);
                         throw error_2;
                     case 5:
                         if (Client) {
@@ -143,7 +143,7 @@ var OrderModel = /** @class */ (function () {
                         return [2 /*return*/, orderList];
                     case 4:
                         error_3 = _a.sent();
-                        console.error("Error while inserting orders:", error_3);
+                        console.error("Encounter orders issue:", error_3);
                         throw error_3;
                     case 5:
                         if (Client) {

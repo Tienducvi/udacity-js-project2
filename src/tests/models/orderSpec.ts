@@ -25,9 +25,9 @@ describe('Order Handler', () => {
 
   beforeAll(async (done) => {
     const userData: BaseUser = {
-      username: 'ViTieuOrder98',
-      firstname: 'Vi',
-      lastname: 'Tieu',
+      username: 'TuNguyen',
+      firstname: 'Tu',
+      lastname: 'Nguyen',
       password: 'password12345',
     };
 
@@ -63,9 +63,9 @@ describe('Order Handler', () => {
   
   beforeAll(async (done) => {
     const userData: BaseUser = {
-      username: 'ViTieu1002',
-      firstname: 'Vi',
-      lastname: 'Tieu',
+      username: 'TuNguyen',
+      firstname: 'Tu',
+      lastname: 'Nguyen',
       password: 'password12345',
     };
 

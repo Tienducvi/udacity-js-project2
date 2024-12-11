@@ -13,9 +13,9 @@ const SECRET = process.env.TOKEN_SECRECT as Secret;
 
 describe('User Handler', () => {
     const userData: BaseUser = {
-        username: 'ViTieu988',
-        firstname: 'Vi',
-        lastname: 'Tieu',
+        username: 'TuNguyen13',
+        firstname: 'Tu',
+        lastname: '13',
         password: 'password12345',
     };
   
@@ -79,9 +79,9 @@ describe('User Handler', () => {
     it('gets the update endpoint of user', async (done) => {
         const newUserData: User = {
             id: userId,
-            username: "ViTieu988",
-            firstname: 'Vi',
-            lastname: 'Tien123',
+            username: "TuNguyen14",
+            firstname: 'Tu',
+            lastname: '14',
             password: 'password6789'
         };
   

@@ -61,9 +61,9 @@ describe('Order Handler', function () {
             switch (_a.label) {
                 case 0:
                     userData = {
-                        username: 'ViTieuOrder98',
-                        firstname: 'Vi',
-                        lastname: 'Tieu',
+                        username: 'TuNguyen',
+                        firstname: 'Tu',
+                        lastname: 'Nguyen',
                         password: 'password12345',
                     };
                     return [4 /*yield*/, request.post('/users').send(userData)];
@@ -108,9 +108,9 @@ describe('Order Handler', function () {
             switch (_a.label) {
                 case 0:
                     userData = {
-                        username: 'ViTieu1002',
-                        firstname: 'Vi',
-                        lastname: 'Tieu',
+                        username: 'TuNguyen',
+                        firstname: 'Tu',
+                        lastname: 'Nguyen',
                         password: 'password12345',
                     };
                     return [4 /*yield*/, request.post('/users').send(userData)];

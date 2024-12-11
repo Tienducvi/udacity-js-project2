@@ -68,7 +68,7 @@ var OrderProduct = /** @class */ (function () {
                         return [2 /*return*/, product];
                     case 4:
                         error_1 = _a.sent();
-                        console.error("Error while inserting product:", error_1);
+                        console.error("Encounter products issue:", error_1);
                         throw error_1;
                     case 5:
                         if (Client) {
@@ -104,7 +104,7 @@ var OrderProduct = /** @class */ (function () {
                         return [2 /*return*/, product];
                     case 4:
                         error_2 = _a.sent();
-                        console.error("Error while inserting product:", error_2);
+                        console.error("Encounter products issue:", error_2);
                         throw error_2;
                     case 5:
                         if (Client) {
@@ -138,7 +138,7 @@ var OrderProduct = /** @class */ (function () {
                         return [2 /*return*/, productList];
                     case 4:
                         error_3 = _a.sent();
-                        console.error("Error while inserting product:", error_3);
+                        console.error("Encounter products issue:", error_3);
                         throw error_3;
                     case 5:
                         if (Client) {
@@ -173,7 +173,7 @@ var OrderProduct = /** @class */ (function () {
                         return [2 /*return*/, result.rows[0]];
                     case 4:
                         error_4 = _a.sent();
-                        console.error("Error while inserting product:", error_4);
+                        console.error("Encounter products issue:", error_4);
                         throw error_4;
                     case 5:
                         if (Client) {
@@ -208,7 +208,7 @@ var OrderProduct = /** @class */ (function () {
                         return [2 /*return*/, 1];
                     case 4:
                         error_5 = _a.sent();
-                        console.error("Error while inserting product:", error_5);
+                        console.error("Encounter products issue:", error_5);
                         throw error_5;
                     case 5:
                         if (Client) {

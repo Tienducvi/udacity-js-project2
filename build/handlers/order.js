@@ -40,28 +40,43 @@ var order_1 = require("../models/order");
 var token_1 = require("./token");
 var orderInstance = new order_1.OrderModel();
 var index = function (_req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var orders;
+    var orders, error_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, orderInstance.showAll()];
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, orderInstance.showAll()];
             case 1:
                 orders = _a.sent();
                 res.json(orders);
-                return [2 /*return*/];
+                return [3 /*break*/, 3];
+            case 2:
+                error_1 = _a.sent();
+                console.error('Encoutner fetching issue:', error_1);
+                res.status(500).json({ error: 'Failed to fetch orders' });
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
         }
     });
 }); };
 var show = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var orderId, order;
+    var orderId, order, error_2;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
+                _a.trys.push([0, 2, , 3]);
                 orderId = parseInt(req.params.id);
                 return [4 /*yield*/, orderInstance.show(orderId)];
             case 1:
                 order = _a.sent();
                 res.json(order);
-                return [2 /*return*/];
+                return [3 /*break*/, 3];
+            case 2:
+                error_2 = _a.sent();
+                console.error('Encoutner fetching issue:', error_2);
+                res.status(500).json({ error: 'Failed to fetch order' });
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
         }
     });
 }); };
@@ -71,7 +86,6 @@ var create = function (req, res) { return __awaiter(void 0, void 0, void 0, func
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 2, , 3]);
-                console.log(req.body);
                 order = {
                     productId: req.body.productId,
                     quantity: req.body.quantity,
@@ -120,14 +134,22 @@ var update = function (req, res) { return __awaiter(void 0, void 0, void 0, func
     });
 }); };
 var destroy = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var deleted;
+    var deleted, error_3;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, orderInstance.delete(req.body.id)];
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, orderInstance.delete(req.body.id)];
             case 1:
                 deleted = _a.sent();
                 res.json(deleted);
-                return [2 /*return*/];
+                return [3 /*break*/, 3];
+            case 2:
+                error_3 = _a.sent();
+                console.error('Encoutner fetching issue:', error_3);
+                res.status(500).json({ error: 'Failed to delete order' });
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
         }
     });
 }); };

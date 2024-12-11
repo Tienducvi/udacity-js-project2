@@ -72,11 +72,11 @@ After all packages installed, run `db-migrate up` to set up the database and get
     POSTGRES_DB=project2
     POSTGRES_TEST_DB=project2test 
     POSTGRES_USER=postgres
-    POSTGRES_PASSWORD=vitieu98
+    POSTGRES_PASSWORD=Tuanquen1991@
     ENV=dev
     BCRYPT_PASSWORD=project2-hash-pash
     SALT_ROUNDS=10
-    TOKEN_SECRECT=ducvitieu98
+    TOKEN_SECRECT=tunv35
     ```
 
 3. **Start** 

@@ -9,7 +9,7 @@ const index = async (_req: Request, res: Response) => {
         const orders = await orderInstance.showAll()
         res.json(orders)
     } catch (error) {
-        console.error('Error fetching orders:', error);
+        console.error('Encoutner fetching issue:', error);
         res.status(500).json({ error: 'Failed to fetch orders' });
     }
 }
@@ -20,7 +20,7 @@ const show = async (req: Request, res: Response) => {
         const order = await orderInstance.show(orderId)
         res.json(order)
     } catch (error) {
-        console.error('Error fetching orders:', error);
+        console.error('Encoutner fetching issue:', error);
         res.status(500).json({ error: 'Failed to fetch order' });
     }
 }
@@ -63,7 +63,7 @@ const destroy = async (req: Request, res: Response) => {
         const deleted = await orderInstance.delete(req.body.id)
         res.json(deleted)
     } catch (error) {
-        console.error('Error fetching orders:', error);
+        console.error('Encoutner fetching issue:', error);
         res.status(500).json({ error: 'Failed to delete order' });
     }
 }

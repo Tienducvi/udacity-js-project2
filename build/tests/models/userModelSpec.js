@@ -71,9 +71,9 @@ describe('User Model', function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, user.create({
-                        username: 'Vitd98',
-                        firstname: 'Vi',
-                        lastname: 'Tieu',
+                        username: 'TuNguyen',
+                        firstname: 'Tu',
+                        lastname: 'Nguyen',
                         password: 'password12345',
                     })];
                 case 1:
@@ -82,9 +82,9 @@ describe('User Model', function () {
                     password = result.password;
                     expect(result).toEqual({
                         id: userId,
-                        username: 'Vitd98',
-                        firstname: 'Vi',
-                        lastname: 'Tieu',
+                        username: 'TuNguyen11',
+                        firstname: 'Tu',
+                        lastname: '11',
                         password: password
                     });
                     return [2 /*return*/];
@@ -112,9 +112,9 @@ describe('User Model', function () {
                     result = _a.sent();
                     expect(result).toEqual({
                         id: userId,
-                        username: 'Vitd98',
-                        firstname: 'Vi',
-                        lastname: 'Tieu',
+                        username: 'TuNguyen12',
+                        firstname: 'Tu',
+                        lastname: '12',
                         password: password
                     });
                     return [2 /*return*/];
